@@ -1,5 +1,8 @@
-# Usa a imagem oficial do PHP com Apache
 FROM php:8.2-apache
 
-# Copia todos os arquivos do projeto pro servidor web
+# Instala o driver do PostgreSQL (pdo_pgsql)
+RUN apt-get update && apt-get install -y libpq-dev \
+    && docker-php-ext-install pdo_pgsql
+
+# Copia os arquivos do seu projeto para o Apache
 COPY . /var/www/html/
