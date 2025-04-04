@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: minha-pagina-php
+    env: docker
+    dockerfilePath: Dockerfile
