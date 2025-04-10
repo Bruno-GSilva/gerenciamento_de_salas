@@ -47,7 +47,7 @@ try {
       validarCadastro();
     });
 
-    function validarLogin() {
+    function validarCadastro() {
       document.getElementById("mensagemErro2").style.display = "none";
       document.getElementById("mensagemOK2").style.display = "none";
 
@@ -64,10 +64,6 @@ try {
         document.getElementById("mensagemOK").style.display = "block";
         document.getElementById("mensagemOK").innerText = "Usuario cadastrado com sucesso!";
       }
-    }
-
-    function validarCadastro(){
-
     }
   </script>
 </body>
