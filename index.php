@@ -24,7 +24,7 @@ try {
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100 bg-light">
   <div class="card p-4 shadow-lg" style="width: 350px;">
-    <h2 class="text-center mb-4">Credenciais de Acesso</h2>
+    <h2 class="text-center mb-4">Login</h2>
     <form id="loginForm">
       <div class="mb-3">
         <label for="login" class="form-label">Login</label>
