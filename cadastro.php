@@ -63,6 +63,7 @@ try {
       } else {
         document.getElementById("mensagemOK2").style.display = "block";
         document.getElementById("mensagemOK2").innerText = "Usuario cadastrado com sucesso!";
+        window.location.href = "index.php";
       }
     }
   </script>
