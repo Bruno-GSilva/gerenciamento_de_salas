@@ -1,18 +1,4 @@
-<?php
-$host = getenv('host');
-$db   = getenv('dbname');
-$user = getenv('user');
-$pass = getenv('password');
-$port = getenv('port');
-
-try {
-    $dsn = "pgsql:host=$host;port=$port;dbname=$db";
-    $pdo = new PDO($dsn, $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "<pre>" . $e->getMessage() . "</pre>";
-}
-?>
+<?php?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -24,7 +10,7 @@ try {
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100 bg-light">
   <div class="card p-4 shadow-lg" style="width: 350px;">
-    <h2 class="text-center mb-4">Credenciais de Acesso</h2>
+    <h2 class="text-center mb-4">Cadastrar Usuario</h2>
     <form id="loginForm">
       <div class="mb-3">
         <label for="login" class="form-label">Login</label>
@@ -34,8 +20,7 @@ try {
         <label for="senha" class="form-label">Senha</label>
         <input type="senha" class="form-control" id="senha" placeholder="Digite sua senha">
       </div>
-      <button type="submit" class="btn btn-primary w-100" onclick="validarLogin()">Entrar</button>
-      <a href="cadastro.php" class="btn btn-outline-secondary w-100 my-2">Cadastrar</a>
+      <button type="submit" class="btn btn-primary w-100" onclick="validarCadastro()">Cadastrar</button>
       <p id="mensagemErro" class="text-center mt-3 text-danger"></p>
       <p id="mensagemOK" class="text-center mt-3 text-success"></p>
     </form>
@@ -45,7 +30,7 @@ try {
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault();
-      validarLogin();
+      validarCadastro();
     });
 
     function validarLogin() {
@@ -63,7 +48,7 @@ try {
         document.getElementById("mensagemErro").innerText = "O campo senha deve ser informado !!!!";
       } else {
         document.getElementById("mensagemOK").style.display = "block";
-        document.getElementById("mensagemOK").innerText = "Login realizado com sucesso!";
+        document.getElementById("mensagemOK").innerText = "Usuario cadastrado com sucesso!";
       }
     }
 
