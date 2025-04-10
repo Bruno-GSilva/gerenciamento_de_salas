@@ -1,5 +1,18 @@
-<?php?>
+<?php
+$host = getenv('host');
+$db   = getenv('dbname');
+$user = getenv('user');
+$pass = getenv('password');
+$port = getenv('port');
 
+try {
+    $dsn = "pgsql:host=$host;port=$port;dbname=$db";
+    $pdo = new PDO($dsn, $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "<pre>" . $e->getMessage() . "</pre>";
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
