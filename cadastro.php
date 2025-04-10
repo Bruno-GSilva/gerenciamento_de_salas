@@ -55,14 +55,14 @@ try {
       let vSenha = document.getElementById("senha2").value;
 
       if (vLogin.trim() === "") {
-        document.getElementById("mensagemErro").style.display = "block";
-        document.getElementById("mensagemErro").innerText = "O campo login deve ser informado !!!!";
+        document.getElementById("mensagemErro2").style.display = "block";
+        document.getElementById("mensagemErro2").innerText = "O campo login deve ser informado !!!!";
       } else if (vSenha.trim() === "") {
-        document.getElementById("mensagemErro").style.display = "block";
-        document.getElementById("mensagemErro").innerText = "O campo senha deve ser informado !!!!";
+        document.getElementById("mensagemErro2").style.display = "block";
+        document.getElementById("mensagemErro2").innerText = "O campo senha deve ser informado !!!!";
       } else {
-        document.getElementById("mensagemOK").style.display = "block";
-        document.getElementById("mensagemOK").innerText = "Usuario cadastrado com sucesso!";
+        document.getElementById("mensagemOK2").style.display = "block";
+        document.getElementById("mensagemOK2").innerText = "Usuario cadastrado com sucesso!";
       }
     }
   </script>
